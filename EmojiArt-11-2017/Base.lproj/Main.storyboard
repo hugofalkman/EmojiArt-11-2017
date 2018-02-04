@@ -65,17 +65,22 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K4e-MX-Gbi">
                                 <rect key="frame" x="0.0" y="20" width="703.5" height="748"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7m5-WU-CYo" customClass="EmojiArtView" customModule="EmojiArt_11_2017" customModuleProvider="target">
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U8n-fV-zCq">
                                         <rect key="frame" x="0.0" y="0.0" width="703.5" height="748"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </view>
+                                        <constraints>
+                                            <constraint firstAttribute="width" priority="250" constant="703.5" id="27P-xX-MIQ"/>
+                                            <constraint firstAttribute="height" priority="250" constant="748" id="rb3-66-lLT"/>
+                                        </constraints>
+                                    </scrollView>
                                 </subviews>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="7m5-WU-CYo" secondAttribute="bottom" id="7N9-ii-oJm"/>
-                                    <constraint firstAttribute="trailing" secondItem="7m5-WU-CYo" secondAttribute="trailing" id="Ab4-qI-18o"/>
-                                    <constraint firstItem="7m5-WU-CYo" firstAttribute="top" secondItem="K4e-MX-Gbi" secondAttribute="top" id="Hyn-ea-7ZB"/>
-                                    <constraint firstItem="7m5-WU-CYo" firstAttribute="leading" secondItem="K4e-MX-Gbi" secondAttribute="leading" id="sRb-1v-OOo"/>
+                                    <constraint firstItem="U8n-fV-zCq" firstAttribute="top" relation="greaterThanOrEqual" secondItem="K4e-MX-Gbi" secondAttribute="top" id="2oB-zn-Lw1"/>
+                                    <constraint firstItem="U8n-fV-zCq" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="K4e-MX-Gbi" secondAttribute="leading" id="83t-py-8ia"/>
+                                    <constraint firstItem="U8n-fV-zCq" firstAttribute="centerX" secondItem="K4e-MX-Gbi" secondAttribute="centerX" id="G0l-Wh-SJ9"/>
+                                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="U8n-fV-zCq" secondAttribute="bottom" id="TGd-q0-G5o"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="U8n-fV-zCq" secondAttribute="trailing" id="UkM-Zq-bcT"/>
+                                    <constraint firstItem="U8n-fV-zCq" firstAttribute="centerY" secondItem="K4e-MX-Gbi" secondAttribute="centerY" id="n3f-SN-dXb"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -90,7 +95,9 @@
                     </view>
                     <connections>
                         <outlet property="dropZone" destination="K4e-MX-Gbi" id="ZAV-mr-lhq"/>
-                        <outlet property="emojiArtView" destination="7m5-WU-CYo" id="OSq-Vn-1r3"/>
+                        <outlet property="scrollView" destination="U8n-fV-zCq" id="4Nd-AV-Hh8"/>
+                        <outlet property="scrollViewHeight" destination="rb3-66-lLT" id="swZ-pD-N6m"/>
+                        <outlet property="scrollViewWidth" destination="27P-xX-MIQ" id="rAS-HK-pxQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
