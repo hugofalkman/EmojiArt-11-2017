@@ -136,6 +136,52 @@
                                             <constraint firstItem="bLl-CZ-pfe" firstAttribute="centerX" secondItem="tOF-Hl-wI7" secondAttribute="centerX" id="yHN-l5-0nb"/>
                                         </constraints>
                                     </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AddEmojiButtonCell" id="6fi-Wi-bWe">
+                                        <rect key="frame" x="180" y="0.0" width="80" height="80"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ljz-tZ-h93">
+                                                    <rect key="frame" x="20.5" y="-4.5" width="39" height="89"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="64"/>
+                                                    <state key="normal" title="+"/>
+                                                    <connections>
+                                                        <action selector="addEmoji" destination="BYZ-38-t0r" eventType="touchUpInside" id="soj-fR-Gsl"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="ljz-tZ-h93" firstAttribute="centerY" secondItem="6fi-Wi-bWe" secondAttribute="centerY" id="aPT-YS-TKB"/>
+                                            <constraint firstItem="ljz-tZ-h93" firstAttribute="centerX" secondItem="6fi-Wi-bWe" secondAttribute="centerX" id="q0Y-pV-nMK"/>
+                                        </constraints>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="EmojiInputCell" id="uPN-7q-b5H" customClass="TextFieldCollectionViewCell" customModule="EmojiArt_11_2017" customModuleProvider="target">
+                                        <rect key="frame" x="270" y="0.0" width="80" height="80"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" clearsOnBeginEditing="YES" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="wen-e4-hhb">
+                                                    <rect key="frame" x="10" y="7.5" width="60" height="64"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="wen-e4-hhb" firstAttribute="leading" secondItem="uPN-7q-b5H" secondAttribute="leading" constant="10" id="37B-IZ-mD4"/>
+                                            <constraint firstAttribute="trailing" secondItem="wen-e4-hhb" secondAttribute="trailing" constant="10" id="Aee-51-AO7"/>
+                                            <constraint firstItem="wen-e4-hhb" firstAttribute="centerY" secondItem="uPN-7q-b5H" secondAttribute="centerY" id="lk8-Ti-ImD"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="textField" destination="wen-e4-hhb" id="lPh-9u-4Od"/>
+                                        </connections>
+                                    </collectionViewCell>
                                 </cells>
                             </collectionView>
                         </subviews>
@@ -161,7 +207,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-32.2265625" y="586.71875"/>
+            <point key="canvasLocation" x="137" y="559"/>
         </scene>
         <!--Split View Controller-->
         <scene sceneID="I0E-cU-oZa">
